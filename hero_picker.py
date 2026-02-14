@@ -8,9 +8,15 @@ from rich import print
 
 console = Console()
 
-heroes_list = open('heroes.txt', encoding='utf-8').read().splitlines()  
+heroes_list = [
+    h.strip().replace("'", "").replace('"', "")
+    for h in open('heroes.txt', encoding='utf-8').read().splitlines()
+]
 
-items_list = open('items.txt', encoding='utf-8').read().splitlines()
+items_list = [
+    i.strip().replace("'", "").replace('"', "")
+    for i in open('items.txt', encoding='utf-8').read().splitlines()
+]
 
 table_res = Table(show_header=True, header_style="bold magenta")
 table_res.add_column("Герои", style="dim", width=30)
@@ -24,13 +30,20 @@ def hero_picker():
                 default='1'
                 ).ask()
             )
-            break
+
+            if hero_q > len(heroes_list):
+                console.print(f"[red]Вы не можете выбрать больше {len(heroes_list)} героев![/red]") 
+                continue
+
+            if hero_q < 1:
+                console.print("[red]Вы должны выбрать хотя бы одного героя![/red]")
+                continue
+
+            break 
         except ValueError:
             pass
-    hero_res = (sample(heroes_list, k = hero_q))
-    table_res.add_row(str(hero_res))
-    print("\n".join(hero_res))
-    return hero_res
+
+    return (sample(heroes_list, k = hero_q))
         
     
     
@@ -42,13 +55,20 @@ def items_picker():
                 default='1'
                 ).ask()
             )
+
+            if item_q > len(items_list):
+                console.print(f"[red]Вы не можете выбрать больше {len(items_list)} предметов! [/red]")
+                continue
+
+            if item_q < 1:
+                console.print("[red]Вы не можете выбрать меньше одного предмета![/red]")
+                continue
+
             break
         except ValueError:
-            pass
-    item_res = (sample(items_list, k = item_q))
-    table_res.add_row(str(item_res))
-    print("\n".join(item_res))
-    return item_res
+            pass 
+
+    return (sample(items_list, k = item_q))
         
     
 
