@@ -29,5 +29,5 @@
 
 ```bash
 git clone https://github.com/your-username/hero-picker.git
-cd hero-picker
+cd dota_hero_picker
 pip install -r requirements.txt
