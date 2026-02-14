@@ -1,0 +1,80 @@
+dota_items = [
+    blink dagger 
+    overwhelming blink 
+    swift blink 
+    arcane blink
+    boots of speed
+     power treads 
+    phase boots 
+    tranquil boots
+    arcane boots 
+    guardian greaves 
+    boots of travel 
+    boots of travel 2
+    hand of midas 
+    magic wand 
+    null talisman 
+    wraith band 
+    bracer
+    bottle 
+    soul ring
+    armlet of mordiggian 
+    desolator 
+    divine rapier
+    monkey king bar 
+    daedalus 
+    butterfly
+    black king bar 
+    linken's sphere 
+    lotus orb
+    blade mail 
+    assault cuirass 
+    heart of tarrasque
+    satanic 
+    eye of skadi
+    manta style 
+    sange and yasha 
+    kaya and sange 
+    yasha and kaya
+    dragon lance 
+    hurricane pike
+    maelstrom 
+    mjollnir 
+    gleipnir
+    battle fury 
+    radiance
+    silver edge 
+    shadow blade
+    bloodthorn 
+    orchid malevolence
+    scythe of vyse 
+    shiva's guard
+    octarine core 
+    refresher orb
+    aghanim's scepter 
+    aghanim's shard
+    pipe of insight 
+    crimson guard
+    heaven's halberd
+    meteor hammer
+    spirit vessel 
+    urn of shadows
+    force staff 
+    glimmer cape
+    eul's scepter of divinity 
+    wind waker
+    holy locket 
+    pavise 
+    solar crest
+    drum of endurance 
+    boots of bearing
+    vladmir's offering 
+    wraith pact
+    mask of madness
+    echo sabre 
+    harpoon
+    diffusal blade 
+    disperser
+    bkb 
+    rapier
+]
